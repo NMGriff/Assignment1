@@ -3,12 +3,20 @@ import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
 import Home from "./src/screens/Home";
+import Add from './src/screens/Add';
 
 const Stack = createStackNavigator()
 
 export default function App() {
   return (
     <View style={styles.container}>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Home">
+         <Stack.Screen name="Home" component={Home} />
+         <Stack.Screen name="Add To Do" component={Add} />
+         </Stack.Navigator>
+      </NavigationContainer>
+
       <TouchableOpacity style={styles.button}>
         <Text style={styles.buttonText}>Add To Do Task</Text>
       </TouchableOpacity>
@@ -16,11 +24,7 @@ export default function App() {
         <Text style={styles.text}>To Do item 1</Text>
       </View>
     </View>
-    <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
-        <Stack.Screen name="Home" component={Home}/>
-      </Stack.Navigator>
-    </NavigationContainer>
+    
   );
 }
 

@@ -5,10 +5,11 @@ export default Home = function () {
     return (
         <View style={Stylesheet.container}>
             <Text style={{fontSize:20}}>The Home Screen</Text>
-        </View>
-        <View style={styles.container}>
+            <View style={styles.container}>
             <Text style={styles.title}>My Todo List</Text>
         </View>
+        </View>
+        
     )
 }
 const styles = StyleSheet.create({
