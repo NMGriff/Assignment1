@@ -1,13 +1,20 @@
 // Home.js
 import { View,Text,Stylesheet } from "react-native";
 
+
+const Stack = createStackNavigator()
+
+
+
 export default Home = function () {
     return (
         <View style={Stylesheet.container}>
             <Text style={{fontSize:20}}>The Home Screen</Text>
             <View style={styles.container}>
-            <Text style={styles.title}>My Todo List</Text>
-        </View>
+                <Text style={styles.title}>My Todo List</Text>
+            </View>
+            <Button title = "Add..."
+             onPress = {()=>NavigationContainer.push('Add')} />
         </View>
         
     )

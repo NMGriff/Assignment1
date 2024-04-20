@@ -18,11 +18,14 @@ export default function App() {
       </NavigationContainer>
 
       <TouchableOpacity style={styles.button}>
+      <Icon name="circle-with-plus" size={20} color="#5bb450" />
         <Text style={styles.buttonText}>Add To Do Task</Text>
       </TouchableOpacity>
       <View style={styles.box}>
         <Text style={styles.text}>To Do item 1</Text>
       </View>
+      <Button title = "Add..."
+      onPress = {()=>NavigationContainer.push('Add')} />
     </View>
     
   );
